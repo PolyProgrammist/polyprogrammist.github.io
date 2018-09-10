@@ -1,3 +1,3 @@
 # cv
 
-[My website](http://polyprogrammist.ru)
+[My website](http://polyprogrammist.github.io)
