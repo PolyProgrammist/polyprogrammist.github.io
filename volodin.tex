@@ -1,30 +1,35 @@
-\documentclass[11pt,a4paper,sans]{moderncv}  
+\documentclass[11pt,a4paper]{moderncv}
 
-\moderncvstyle{casual}
-\moderncvcolor{blue} 
+\moderncvtheme[blue]{classic} 
+\usepackage[utf8]{inputenc}  %Windows 
 
-\usepackage[utf8]{inputenc} 
+%\usepackage[scale=0.975]{geometry}
+\usepackage[top=0.5cm, bottom=0.5cm, left=0.5cm, right=0.5cm]{geometry}
+\usepackage{graphicx}
 
-\usepackage[scale=0.75]{geometry}
+\firstname{Vadim}
+\familyname{Volodin}  
+\mobile{+79528860485}    
+\homepage{polyprogrammist.github.io}                
+\email{pechkin350@gmail.com}                              
+\social[github]{polyprogrammist}
+\makeatletter
+\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+\makeatother
 
-\name{Vadim}{Volodin}
-%\title{Software Engineer}
-\phone[mobile]{+79528860485}
-\email{pechkin350@gmail.com} 
-\homepage{polyprogrammist.github.io}  
-\social[github]{polyprogrammist}      
-\photo[64pt][0.4pt]{img/about.jpg}  
+\usepackage{multibib}
+\newcites{book,misc}{{Books},{Others}}
 
-% bibliography adjustements (only 
-%   to show numerical labels in the bibliography (default is to show no labels)
-\makeatletter\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}\makeatother
+\nopagenumbers{} 
+
 \begin{document}
 \makecvtitle
 
-%objective
-%education
-%skills
 %experience
+%education
+%technical experience 
+%additional experience
+%languages and technologies
 
 \renewcommand*{\cventry}[7][.25em]{%
   \cvitem[#1]{#2}{%
@@ -37,44 +42,32 @@
     \ifx&#7&%
       \else{\newline{}\begin{minipage}[t]{\linewidth}\small#7\end{minipage}}\fi}}
 
-\section{Objective}
-\cvitem{}{Seeking a position as a junior software engineering intern. Looking for a place to develop my skills.}
+\section{Experience}
+\cventry{}{}{Micran, internship, summer 2018}{}{}{{}%
+\begin{itemize}
+\item Implemented the plugin for radar software using C++, Qt and linux. It was aimed to test radar engines.
+\end{itemize}}
+\cventry{}{}{Yandex, practice, spring 2018}{}{}{{}%
+\begin{itemize}
+\item Worked with ReactJS on the project Secret Santa.
+\end{itemize}}
 
 \section{Education}
-\cventry{2016--2020}{}{Saint Petersburg State University}{}{}{Software Engineering}
-\cventry{2017--2019}{}{Computer Science Center}{}{}{Software Engineering, Data Analysis}
+\cventry{f}{g}{Saint Petersburg State University}{a}{a}{{c}%
+\begin{itemize}
+\item Worked with ReactJS on the project Secret Santa.
+\end{itemize}}
+\cventry{}{}{Saint Petersburg State University. Bachelor's in Software Engineering. 2016-2020}{}{}{}
+\cventry{}{}{Computer Science Center. Software Engineering, Data Analysis. 2017-2020}{}{}{}
 
+\section{Technical experience}
+\cvitem{}{DirectoriesSynchronize - a tool to synchronize }
 
-\section{Experience}
-\cventry{Summer 2018}{}{Micran}{}{}{Junior C++ developer.{}%
-\begin{itemize}
-\item Using C++, Qt and linux in developing software for the radars.
-\end{itemize}}
-\cventry{Spring 2018}{}{Yandex}{}{}{Practicing frontend developer.{}%
-\begin{itemize}
-\item Working with ReactJS on the project Secret Santa
-\end{itemize}}
-\cventry{2014--Present}{}{ACM ICPC}{}{}{Participant.{}%
-\begin{itemize}
-\item Quarterfinals, codeforces, topcoder
-\end{itemize}}
-\cventry{2016--Present}{}{Hackatons}{}{}{Participant.{}%
-\begin{itemize}
-\item SibCode Hackaton from SibirSoftProject - 2015
-\item Hackatons from FirstLineSoftware - 2016, 2017
-\item Epam Data Science Hackaton - 2017
-\end{itemize}}
-\cventry{2015-Present}{}{Github}{}{}{My Projects.{}%
-\begin{itemize}
-\item Synchronization of directories - C\#
-\item Platform for interactive student book - Java
-\item Parallel algorithms - C\# 
-\item Go Game - python
-\item Battle Sea Game - python, js
-\end{itemize}}
+\section{Additional experience}
+\cvitem{}{Reached division 1 on Codeforces}
+\cvitem{}{Participated in 3 hackatons}
 
-\section{Skills}
-\cvitem{}{Knowledge of algorithms}
+\section{Languages and Technologies}
 \cvitem{}{C++, QT}
 \cvitem{}{Java, spring}
 \cvitem{}{Python, pyqt, django, scikit-learn, pandas, numpy}
