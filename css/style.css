@@ -383,7 +383,7 @@ ol.type li a:hover {
 	opacity: 1;
 }
 /* Resume Section */
-#experience, #education {
+#experience, #education, #current {
 	padding: 100px 0;
 	background: #dddddd;
 }
